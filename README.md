@@ -15,6 +15,9 @@ npm install  # si es un proyecto Node.js
 npm start  # si es un proyecto Node.js
 
 ## Abre la aplicación en tu navegador en http://localhost:4200.
+
+## Ejecuta la aplicación navegador.py 
+
 Si deseas contribuir al proyecto, sigue estos pasos:
 
 Fork del repositorio.
