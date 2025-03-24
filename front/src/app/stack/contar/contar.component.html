@@ -1,0 +1,27 @@
+        
+<div class="container" *ngIf="contarData">
+    <table class="table-responsive">
+        <thead>
+                <td colspan="2"><h2>Preguntas</h2></td>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Preguntas contestadas</td>
+                <td>Preguntas no contestadas</td>
+            </tr>
+            <tr>
+                <td>
+                    {{contarData.Contestadas}}
+                </td>
+                <td>
+                    {{contarData['No contestadas']}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div *ngIf="error">
+    <p style="color: red;">{{ error }}</p>
+</div>
+      

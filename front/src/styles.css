@@ -1,0 +1,122 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Times New Roman', Times, serif; 
+  font-size: 16px;
+  color: #555; 
+  background-color: #f0e6f5; 
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #d0c2d8; 
+}
+th, td {
+  padding: 15px 20px;
+  text-align: left;
+  border-bottom: 1px solid #e6d0e8;
+}
+
+th {
+  background-color: #e8d8e0; 
+  font-weight: bold;
+  color: #666;
+}
+
+tr:nth-child(even) {
+  background-color: #f0e8f0; 
+}
+
+tr:hover {
+  background-color: #e8e0e8; 
+}
+
+caption {
+  text-align: left;
+  font-style: italic;
+  padding: 12px;
+  color: #777;
+  font-size: 14px;
+}
+.header-vintage {
+  background-color: #E6E0EB; 
+  color: #483D8B; 
+  padding: 20px;
+  font-family: 'Garamond', serif;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #D8BFD8; 
+  text-align: center;
+}
+
+.header-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-logo img {
+  max-height: 80px;
+}
+
+.header-navegacion a {
+  color: #483D8B; 
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 1.1em;
+}
+
+.header-navegacion a:hover {
+  text-decoration: underline;
+  color: #9370DB;
+}
+
+.header-informacion p {
+  font-style: italic;
+  font-size: 0.9em;
+  color: #555; 
+}
+
+
+@media (max-width: 768px) {
+  .header-contenido {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .header-navegacion {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .header-navegacion a {
+      margin: 10px 0;
+  }
+
+  .header-informacion {
+      margin-top: 15px;
+  }
+}
+.seccion-centrada {
+  max-width: 800px; 
+  margin: 50px auto; 
+  padding: 20px; 
+  text-align: center; 
+}
+
+.seccion-centrada {
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  min-height: 300px; 
+}
+
+.seccion-centrada{
+  display: Grid;
+  place-items: center;
+  min-height: 300px;
+}
+body{
+  background-color: lightblue;
+}

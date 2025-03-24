@@ -1,0 +1,30 @@
+  <div *ngIf="error">
+    <p style="color: red;">{{ error }}</p>
+    </div>
+  
+  <div class="contenedor-principal">
+      <header class="header-vintage">
+          <h1>Aerolinea con más de dos vuelos por día</h1>
+      </header>
+      <main>
+          <section class="seccion-centrada">
+            <div class="container" *ngIf="mayores">
+              <table class="table-responsive">
+                  <thead>
+                    <td>Aerolinea</td>
+                    <td>Fecha</td>
+                    <td>Vuelos por dia</td>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let dato of mayores">
+                      <td>{{ dato.Aerolinea }}</td>
+                      <td>{{ dato.Cantidad }}</td>
+                      <td>{{ dato.Fecha }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>   
+          </section>
+      </main>
+  </div>
+  

@@ -1,0 +1,24 @@
+<div class="container" *ngIf="diaDatos">
+  <table class="table-responsive">
+    <thead>
+      <tr>
+        <td colspan="2">Dia con mas vuelos</td>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Dia</td>
+      <td>Cantidad de vuelos</td>
+    </tr>
+    <tr *ngFor="let dato of diaDatos">
+      <td>{{dato.Dia}}</td>
+      <td>{{dato['Total Vuelos']}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="error">
+  <p style="color: red;">{{ error }}</p>
+  </div>
+            

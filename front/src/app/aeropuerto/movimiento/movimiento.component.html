@@ -1,0 +1,29 @@
+
+<div *ngIf="error">
+    <p style="color: red;">{{ error }}</p>
+</div>
+
+<div class="contenedor-principal">
+    <header>
+        <h1>Aeropuerto con más movimientos</h1>
+    </header>
+    <main>
+        <section class="seccion-centrada">
+            <div class="container" *ngIf="movDatos">
+                <table class="table-responsive">
+                    <thead>                    
+                        <td colspan="2"><h2>Aeropuerto con más movimientos</h2></td>                            
+                    </thead>
+                    <tbody>
+                        <td>Aeropuerto</td>                
+                        <td>Total movimientos</td>
+                        <tr *ngFor="let dato of movDatos">
+                            <td>{{dato.Aeropuerto}}</td>
+                            <td>{{dato['Total Movimientos']}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>    
+        </section>
+    </main>
+</div>

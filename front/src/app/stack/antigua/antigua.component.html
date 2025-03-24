@@ -1,0 +1,51 @@
+<div class="container" *ngIf="antiguaData">
+  <table class="table-responsive">
+    <thead>
+      <tr>
+        <td colspan="4">Pregunta actual y antigua</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2">Pregunta más antigua</td>
+        <td colspan="2">Pregunta más actual</td>
+      </tr>
+      <tr>
+        <td><strong>Titulo: </strong></td> <td>{{ antiguaData['Pregunta mas antigua'].Titulo }}</td>
+        <td><strong>Titulo: </strong></td> <td>{{ antiguaData['Pregunta mas actual'].Titulo }}</td>
+      </tr>
+      <tr>
+        <td><strong>Respondida: </strong></td> <td>{{ antiguaData['Pregunta mas antigua'].Repondida }}</td>
+        <td><strong>Respondida: </strong></td> <td>{{ antiguaData['Pregunta mas actual'].Repondida}}</td>
+      </tr>
+      <tr>
+        <td><strong>Vistas: </strong></td> <td>{{ antiguaData['Pregunta mas antigua'].Vistas }}</td>
+        <td><strong>Vistas: </strong></td> <td>{{ antiguaData['Pregunta mas actual'].Vistas}}</td>
+      </tr>
+      <tr>
+        <td><strong>Puntaje: </strong></td> <td>{{ antiguaData['Pregunta mas antigua'].Puntaje }}</td>
+        <td><strong>Puntaje: </strong></td> <td>{{ antiguaData['Pregunta mas actual'].Puntaje}}</td>
+      </tr>
+      <tr>
+        <td><strong>Usuario: </strong></td> <td>{{ antiguaData['Pregunta mas antigua'].Usuario }}</td>
+        <td><strong>Usuario: </strong></td> <td>{{ antiguaData['Pregunta mas actual'].Usuario}}</td>
+      </tr>
+      <tr>
+        <td><strong>Reputacion del usuario: </strong></td> <td>{{ antiguaData['Pregunta mas antigua']['Reputacion del usuario'] }}</td>
+        <td><strong>Reputacion del usuario: </strong></td> <td>{{ antiguaData['Pregunta mas actual']['Reputacion del usuario']}}</td>
+      </tr>
+      <tr>
+        <td><strong>Link a la pregunta: </strong></td> <td>{{ antiguaData['Pregunta mas antigua']['Link a la pregunta'] }}</td>
+        <td><strong>Link a la pregunta: </strong></td> <td>{{ antiguaData['Pregunta mas actual']['Link a la pregunta']}}</td>
+      </tr>
+      <tr>
+        <td><strong>Fecha: </strong></td> <td>{{ antiguaData['Pregunta mas antigua'].Fecha }}</td>
+        <td><strong>Fecha: </strong></td> <td>{{ antiguaData['Pregunta mas actual'].Fecha}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="error">
+  <p style="color: red;">{{ error }}</p>
+</div>

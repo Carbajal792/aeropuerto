@@ -1,0 +1,51 @@
+<div class="container" *ngIf="vistasData">
+  <table class="table-responsive">
+    <thead>
+      <tr>
+        <td colspan="2"><h2>Pregunta con mas vistas</h2></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Titulo:</strong></td>
+        <td>{{ vistasData.Titulo }}</td>
+      </tr>
+      <tr>
+        <td><strong>Etiquetas:</strong></td>
+        <td>{{ vistasData.Etiquetas }}</td>
+      </tr>
+      <tr>
+        <td><strong>Etiquetas:</strong></td>
+        <td>{{ vistasData.Etiquetas }}</td>
+      </tr>
+      <tr>
+        <td><strong>Respondida:</strong></td>
+        <td>{{ vistasData.Respondida }}</td>
+      </tr>
+      <tr>
+        <td><strong>Vistas:</strong></td>
+        <td>{{ vistasData.Vistas }}</td>
+      </tr>
+      <tr>
+        <td><strong>Puntaje:</strong></td>
+        <td>{{ vistasData.Puntaje }}</td>
+      </tr>
+      <tr>
+        <td><strong>Usuario:</strong></td>
+        <td>{{ vistasData.Usuario }}</td>
+      </tr>
+      <tr>
+        <td><strong>Reputación del usuario:</strong></td>
+        <td>{{ vistasData['Reputacion del usuario'] }}</td>
+      </tr>
+      <tr>
+        <td><strong>Link a la pregunta:</strong></td>
+        <td><a [href]="vistasData['Link a la pregunta']" target="_blank">{{ vistasData['Link a la pregunta'] }}</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="error">
+  <p style="color: red;">{{ error }}</p>
+</div>

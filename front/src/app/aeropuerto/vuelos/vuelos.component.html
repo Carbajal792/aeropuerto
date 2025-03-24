@@ -1,0 +1,34 @@
+<div class="contenedor-principal">
+    <header>
+        <h1>Aerolineas con más vuelos</h1>
+    </header>
+    <main>
+        <section class="seccion-centrada">
+            <div *ngIf="vuelosDatos">
+                <table class="table-responsive">
+                    <thead>
+                        <tr>
+                            <td colspan="2"><h2>Aerolineas con más vuelos</h2></td>
+                        </tr>
+                    <tr>
+                        <td> Aerolinea</td>                
+                        <td>Total vuelos</td>
+                    </tr>
+                        
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let dato of vuelosDatos">
+                            <td>{{dato.Aerolinea}}</td>
+                            <td>{{dato['Total Vuelos']}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>            
+        </section>
+    </main>
+</div>
+
+
+  <div *ngIf="error">
+    <p style="color: red;">{{ error }}</p>
+  </div>
