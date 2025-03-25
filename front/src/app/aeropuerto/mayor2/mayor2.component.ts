@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
 export class Mayor2Component {
   mayores: any;
   error: any;
-
+  
   constructor(private http: HttpClient){}
 
   ngOnInit(): void {
@@ -22,8 +22,10 @@ export class Mayor2Component {
       },
       (error) => {
         this.error = error;
-        console.error('Error en la petición: '+ error.message);
+        console.error('Error en la petición: '+ this.error.message);
       }
     );
   }
+
+
 }

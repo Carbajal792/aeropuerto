@@ -151,7 +151,7 @@ def ejecutar(query):
 
 def obtenerResultados(tupla):
     if not tupla:
-        return []
+        return
     comp = tupla[0][1]
     resultados = [fila for fila in tupla if fila[1] == comp]
     return resultados
@@ -204,7 +204,7 @@ def mayor2():
             FROM vuelos v
 			JOIN aerolineas a ON v.id_aerolinea = a.id_aerolinea
            	GROUP BY a.nombre_aerolinea,v.dia
-			HAVING COUNT(v.id_aerolinea) >= 2
+			HAVING COUNT(v.id_aerolinea) >2
 			ORDER BY total_vuelos DESC;
             """
     resultado = ejecutar(query)

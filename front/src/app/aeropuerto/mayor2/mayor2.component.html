@@ -1,19 +1,16 @@
-  <div *ngIf="error">
-    <p style="color: red;">{{ error }}</p>
-    </div>
-  
-  <div class="contenedor-principal">
+  <div class="contenedor-principal" *ngIf="mayores">
       <header class="header-vintage">
           <h1>Aerolinea con más de dos vuelos por día</h1>
       </header>
       <main>
           <section class="seccion-centrada">
-            <div class="container" *ngIf="mayores">
+            <div class="container">
               <table class="table-responsive">
                   <thead>
                     <td>Aerolinea</td>
-                    <td>Fecha</td>
                     <td>Vuelos por dia</td>
+                    <td>Fecha</td>
+                    
                   </thead>
                   <tbody>
                     <tr *ngFor="let dato of mayores">
@@ -23,8 +20,25 @@
                     </tr>
                   </tbody>
                 </table>
+
+
               </div>   
           </section>
       </main>
   </div>
+
+<div *ngIf="error">
+  <div class="contenedor-principal">
+    <header class="header-vintage">
+        <h1>Aerolinea con más de dos vuelos por día</h1>
+    </header>
+    <main>
+        <section class="seccion-centrada">
+          <div>
+            <h2><p style="color: red;">Error no hay datos encontrados </p></h2>
+            </div>   
+        </section>
+    </main>
+</div>
+</div>
   

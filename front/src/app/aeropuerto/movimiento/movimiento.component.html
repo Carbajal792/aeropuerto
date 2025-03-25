@@ -1,10 +1,5 @@
-
-<div *ngIf="error">
-    <p style="color: red;">{{ error }}</p>
-</div>
-
 <div class="contenedor-principal">
-    <header>
+    <header class="header-vintage">
         <h1>Aeropuerto con más movimientos</h1>
     </header>
     <main>
@@ -12,7 +7,7 @@
             <div class="container" *ngIf="movDatos">
                 <table class="table-responsive">
                     <thead>                    
-                        <td colspan="2"><h2>Aeropuerto con más movimientos</h2></td>                            
+                        <td colspan="2" style="text-align: center;"><h2>Aeropuerto</h2></td>                            
                     </thead>
                     <tbody>
                         <td>Aeropuerto</td>                

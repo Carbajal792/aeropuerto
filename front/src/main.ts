@@ -10,6 +10,7 @@ import { ContarComponent } from './app/stack/contar/contar.component';
 import { ReputacionComponent } from './app/stack/reputacion/reputacion.component';
 import { VistasComponent } from './app/stack/vistas/vistas.component';
 import { AntiguaComponent } from './app/stack/antigua/antigua.component';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 bootstrapApplication(AppComponent, appConfig)
   .catch((err) => console.error(err));
@@ -47,3 +48,5 @@ bootstrapApplication(VistasComponent, {
 bootstrapApplication(AntiguaComponent, {
   providers: [provideHttpClient()]
 }).catch((err) => console.error(err));
+
+platformBrowserDynamic().bootstrapModule(AppComponent);

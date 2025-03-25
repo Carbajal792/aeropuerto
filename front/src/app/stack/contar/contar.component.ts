@@ -1,16 +1,17 @@
-import { Component} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-contar',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './contar.component.html',
   styleUrl: './contar.component.css'
 })
-export class ContarComponent {
+export class ContarComponent implements OnInit{
   contarData: any;
   error: any;
-
+  opcion:number=1;
   constructor(private http: HttpClient){}
 
   ngOnInit(): void {

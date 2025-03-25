@@ -154,16 +154,13 @@ def dia():
 def mayor():
     try:
         resultado = funciones.mayor2()
-        if resultado:
-            
+        if resultado is not None:
             response = funciones.make_response(funciones.jsonify(resultado))
             return funciones.configurar_cors(response)
-        else:
-            
+        else:            
             response = funciones.make_response(funciones.jsonify({"error": "No se encontraron resultados"}), 404)
             return funciones.configurar_cors(response)
     except Exception as e:
-        
         response = funciones.make_response(funciones.jsonify({"error": str(e)}), 500)
         return funciones.configurar_cors(response)
     

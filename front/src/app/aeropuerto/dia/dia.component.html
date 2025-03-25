@@ -1,24 +1,40 @@
-<div class="container" *ngIf="diaDatos">
-  <table class="table-responsive">
-    <thead>
-      <tr>
-        <td colspan="2">Dia con mas vuelos</td>
-      </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <td>Dia</td>
-      <td>Cantidad de vuelos</td>
-    </tr>
-    <tr *ngFor="let dato of diaDatos">
-      <td>{{dato.Dia}}</td>
-      <td>{{dato['Total Vuelos']}}</td>
-    </tr>
-    </tbody>
-  </table>
+<div class="contenedor-principal">
+    <header class="header-vintage">
+        <h1>Día con más vuelos</h1>
+    </header>
+    <main>
+        <section class="seccion-centrada">
+          <div class="container" *ngIf="diaDatos">
+            <table class="table-responsive">
+              <thead>
+                  <td colspan="2" style="text-align: center;"><h2>Día</h2></td>                
+              </thead>
+              <tbody>
+              <tr>
+                <td>Dia</td>
+                <td>Cantidad de vuelos</td>
+              </tr>
+              <tr *ngFor="let dato of diaDatos">
+                <td>{{dato.Dia}}</td>
+                <td>{{dato['Total Vuelos']}}</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          
+        </section>
+    </main>
 </div>
 
-<div *ngIf="error">
-  <p style="color: red;">{{ error }}</p>
-  </div>
-            
+<div class="contenedor-principal" *ngIf="error">
+  <header class="header-vintage">
+      <h1>Aerolinea con más de dos vuelos por día</h1>
+  </header>
+  <main>
+      <section class="seccion-centrada">
+        <div>
+        <p style="color: red;"> {{error}} </p>
+          </div>   
+      </section>
+  </main>
+</div>

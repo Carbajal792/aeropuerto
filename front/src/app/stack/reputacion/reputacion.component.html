@@ -1,47 +1,53 @@
-<div class="container" *ngIf="reputacionData">
-  <table class="table-responsive">
-    <thead>
-      <tr>
-        <td colspan="2"><h2>Pregunta con más reputación</h2></td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Titulo:</strong></td>
-        <td>{{ reputacionData.Titulo }}</td>
-      </tr>
-      <tr>
-        <td><strong>Etiquetas:</strong></td>
-        <td>{{ reputacionData.Etiquetas }}</td>
-      </tr>
-      <tr>
-        <td><strong>Respondida:</strong></td>
-        <td>{{ reputacionData.Respondida }}</td>
-      </tr>
-      <tr>
-        <td><strong>Vistas:</strong></td>
-        <td>{{ reputacionData.Vistas }}</td>
-      </tr>
-      <tr>
-        <td><strong>Puntaje:</strong></td>
-        <td>{{ reputacionData.Puntaje }}</td>
-      </tr>
-      <tr>
-        <td><strong>Usuario:</strong></td>
-        <td>{{ reputacionData.Usuario }}</td>
-      </tr>
-      <tr>
-        <td><strong>Reputación del usuario:</strong></td>
-        <td>{{ reputacionData['Reputacion del usuario'] }}</td>
-      </tr>
-      <tr>
-        <td><strong>Link a la pregunta:</strong></td>
-        <td><a [href]="reputacionData['Link a la pregunta']" target="_blank">{{ reputacionData['Link a la pregunta'] }}</a></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+ <div class="contenedor-principal">
+  <header class="header-vintage">
+      <h1>Pregunta con más reputación</h1>
+  </header>
+  <main>
+      <section class="seccion-centrada">
 
-<div *ngIf="error">
-  <p style="color: red;">{{ error }}</p>
+        <div class="container" *ngIf="reputacionData">
+          <table class="table-responsive">
+            <thead>
+              <tr>
+                <td colspan="2" style="text-align: center;"><h2>Pregunta</h2></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Titulo:</strong></td>
+                <td>{{ reputacionData.Titulo }}</td>
+              </tr>
+              <tr>
+                <td><strong>Etiquetas:</strong></td>
+                <td>{{ reputacionData.Etiquetas }}</td>
+              </tr>
+              <tr>
+                <td><strong>Respondida:</strong></td>
+                <td>{{ reputacionData.Respondida }}</td>
+              </tr>
+              <tr>
+                <td><strong>Vistas:</strong></td>
+                <td>{{ reputacionData.Vistas }}</td>
+              </tr>
+              <tr>
+                <td><strong>Puntaje:</strong></td>
+                <td>{{ reputacionData.Puntaje }}</td>
+              </tr>
+              <tr>
+                <td><strong>Usuario:</strong></td>
+                <td>{{ reputacionData.Usuario }}</td>
+              </tr>
+              <tr>
+                <td><strong>Reputación del usuario:</strong></td>
+                <td>{{ reputacionData['Reputacion del usuario'] }}</td>
+              </tr>
+              <tr>
+                <td><strong>Link a la pregunta:</strong></td>
+                <td><a [href]="reputacionData['Link a la pregunta']" target="_blank">{{ reputacionData['Link a la pregunta'] }}</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+  </main>
 </div>

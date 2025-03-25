@@ -1,1 +1,23 @@
-<app-mayor2/>
+<div class="vintage-lista">
+    <select [(ngModel)]="selectedOption">
+        <option value="antigua">Pregunta más antigua</option>
+        <option value="conteo">Conteo de preguntas</option>
+        <option value="reputacion">Pregunta con más reputación</option>
+        <option value="vistas">Pregunta con más vistas</option>
+        <option value="aeropuerto-vuelos">Aeropuerto con más vuelos</option>
+        <option value="aerolineas-vuelos">Aerolineas más de dos vuelos</option>
+        <option value="aeropuerto-movimiento">Aeropuerto con más movimiento</option>
+        <option value="aerolinea-vuelos">Aerolinea con más vuelos</option>
+    </select>
+</div>
+
+<div class="contenedor">
+    <app-antigua *ngIf="selectedOption === 'antigua'"></app-antigua>
+    <app-contar *ngIf="selectedOption === 'conteo'"></app-contar>
+    <app-reputacion *ngIf="selectedOption === 'reputacion'"></app-reputacion>
+    <app-vistas *ngIf="selectedOption === 'vistas'"></app-vistas>
+    <app-dia   *ngIf="selectedOption === 'aeropuerto-vuelos'"></app-dia>
+    <app-mayor2 *ngIf="selectedOption === 'aerolineas-vuelos'"></app-mayor2>
+    <app-movimiento *ngIf="selectedOption === 'aeropuerto-movimiento'"></app-movimiento>
+    <app-vuelos *ngIf="selectedOption === 'aerolinea-vuelos'"></app-vuelos>
+</div>

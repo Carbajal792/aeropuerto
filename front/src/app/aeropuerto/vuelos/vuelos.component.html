@@ -1,5 +1,18 @@
-<div class="contenedor-principal">
-    <header>
+<div class="contenedor-principal" *ngIf="error">
+    <header class="header-vintage">
+        <h1>Aerolinea con más de dos vuelos por día</h1>
+    </header>
+    <main>
+        <section class="seccion-centrada">
+          <div>
+          <p style="color: red;"> {{error}} </p>
+            </div>   
+        </section>
+    </main>
+</div>
+
+  <div class="contenedor-principal">
+    <header class="header-vintage">
         <h1>Aerolineas con más vuelos</h1>
     </header>
     <main>
@@ -8,7 +21,7 @@
                 <table class="table-responsive">
                     <thead>
                         <tr>
-                            <td colspan="2"><h2>Aerolineas con más vuelos</h2></td>
+                            <td colspan="2"><h2>Aerolineas</h2></td>
                         </tr>
                     <tr>
                         <td> Aerolinea</td>                
@@ -23,12 +36,7 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>            
+            </div>  
         </section>
     </main>
 </div>
-
-
-  <div *ngIf="error">
-    <p style="color: red;">{{ error }}</p>
-  </div>

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-reputacion',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './reputacion.component.html',
   styleUrls: ['./reputacion.component.css']
@@ -11,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
 export class ReputacionComponent implements OnInit{
   reputacionData: any;
   error: any;
-
+  opcion:number =2;
   constructor(private http: HttpClient){}
 
   ngOnInit(): void {
